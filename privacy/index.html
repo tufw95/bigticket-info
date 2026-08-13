@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bigticket for CTicket privacy policy.">
+  <meta name="theme-color" content="#10213f">
+  <title>Privacy Policy · Bigticket for CTicket</title>
+  <link rel="icon" href="../assets/bigticket-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Bigticket home">
+        <img src="../assets/bigticket-mark.svg" alt="">
+        <span>Bigticket for CTicket</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../">Overview</a>
+        <a href="../support/">Support</a>
+        <a href="./" aria-current="page">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Chrome Web Store disclosure</p>
+        <h1>Privacy Policy</h1>
+        <p>Last updated: August 13, 2026. Bigticket is a Chrome extension that assists users in a user-selected CTicket ticket workflow. Bigticket has no analytics, advertising, profile-sync, or payment-processing server.</p>
+      </section>
+
+      <div class="document-layout">
+        <nav class="document-nav" aria-label="Privacy policy sections">
+          <p>On this page</p>
+          <a href="#data">Data handled</a>
+          <a href="#use">How data is used</a>
+          <a href="#sharing">Sharing and sale</a>
+          <a href="#retention">Retention</a>
+          <a href="#security">Security and scope</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <article class="document">
+          <section id="data">
+            <h2>Data handled by the extension</h2>
+            <p>Bigticket can store the following data in <code>chrome.storage.local</code> inside the user's Chrome profile:</p>
+            <ul>
+              <li>CTicket event URLs, sale schedules, ticket preferences, quantities, and optional budgets.</li>
+              <li>Optional Ticket Claimer fields entered by the user: name, email, phone number, and identity/passport number.</li>
+              <li>An optional Membership or presale access code.</li>
+              <li>A payment-method preference such as VietQR or card.</li>
+              <li>Operational state required to reconnect a user-managed CTicket tab.</li>
+            </ul>
+            <p><strong>Bigticket does not collect or store card numbers, expiry dates, CVV/CVC, bank credentials, OTP, 3DS data, queue tokens, or completed transaction details.</strong></p>
+            <p>The extension also keeps a short-lived operational lease in <code>chrome.storage.session</code> while an event is armed. This lease contains event and sale timing, target tab/occurrence, ticket priorities and quantity, an optional budget, payment-method preference, and automation-state flags. It does not contain Ticket Claimer fields, Membership/presale codes, or payment credentials and is cleared when Chrome exits.</p>
+          </section>
+
+          <section id="use">
+            <h2>How data is used</h2>
+            <ul>
+              <li>Event and ticket preferences are used only to prepare and operate the CTicket event tab explicitly started by the user.</li>
+              <li>Ticket Claimer and presale fields are used only to fill matching forms in that managed tab.</li>
+              <li>The payment-method preference is used only to select CTicket's matching payment option and enter the ticket-hold screen. Payment credentials and the transaction remain under Chrome, CTicket/the payment provider, and the user.</li>
+              <li>While an event is running, the extension reads visible CTicket page state and same-origin CTicket event responses to detect sale timing, queue state, ticket availability, and checkout progress.</li>
+              <li>On CTicket event pages, a narrowly scoped main-world observer records only request timing, pending/completed state, transport, HTTP status, and a truncated CTicket endpoint path for event-status requests. It does not read request or response bodies, headers, Membership values, form fields, cookies, or queue tokens.</li>
+            </ul>
+            <p>The automation content script is injected dynamically only into an enabled CTicket tab managed by Bigticket. A separate request-timing observer is registered at <code>document_start</code> only on CTicket event URL routes so it can see the page's earliest same-origin event-status request. It ignores queue, booking, payment, and other non-event routes even after an SPA route change, emits no personal or response-body data, and is ignored unless that tab is armed.</p>
+            <p>Bigticket does not read browsing activity outside CTicket event/workflow pages. Bigticket makes no update, analytics, or profile request to the developer's servers; Chrome Web Store provides extension updates.</p>
+            <p>When the user continues a CTicket form, the relevant form data is submitted to CTicket under CTicket's own privacy policy. Bigticket does not send saved user data to the Bigticket developer or to GitHub.</p>
+          </section>
+
+          <section id="sharing">
+            <h2>Sharing and sale of data</h2>
+            <p>Bigticket does not sell user data. It does not use user data for advertising, creditworthiness, lending, or unrelated purposes. It does not share stored user data with third parties other than CTicket when the user uses the assisted workflow described above.</p>
+          </section>
+
+          <section id="retention">
+            <h2>Retention and deletion</h2>
+            <p>Stored data remains in the user's Chrome profile until the user clears it or uninstalls the extension. Users can:</p>
+            <ul>
+              <li>remove an event to delete that event's plan and presale code;</li>
+              <li>use <strong>Xóa hồ sơ &amp; mã presale</strong> to clear saved Ticket Claimer fields and the selected event's access code;</li>
+              <li>clear Bigticket extension data in Chrome; or</li>
+              <li>uninstall Bigticket to remove its local and session data from that Chrome profile.</li>
+            </ul>
+          </section>
+
+          <section id="security">
+            <h2>Security and scope</h2>
+            <p>Bigticket's website access is limited to <code>https://cticket.vn/*</code>. Sensitive profile state in <code>chrome.storage.local</code> is restricted to trusted extension contexts. The short-lived content-script lease is isolated in <code>chrome.storage.session</code> and excludes Ticket Claimer, presale, and payment-credential values.</p>
+            <p>CAPTCHA, OTP, seat/location selection, payment credentials, and the actual transfer/card submission remain user-controlled. The extension does not bypass queue tokens, authentication, or payment verification and does not execute remotely hosted code.</p>
+            <p>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+          </section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <p>For privacy requests or support, email <a href="mailto:tufw95@gmail.com">tufw95@gmail.com</a>. Do not send card numbers, CVV/CVC, bank credentials, OTP, 3DS data, identity documents, or presale codes.</p>
+            <p>General product guidance is available on the <a href="../support/">Bigticket support page</a>.</p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Bigticket is independent software and is not affiliated with, sponsored by, or endorsed by CTicket.</p>
+        <div class="footer-links">
+          <a href="../">Home</a>
+          <a href="../support/">Support</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

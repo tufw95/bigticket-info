@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tufw95.github.io/bigticket-info/sitemap.xml

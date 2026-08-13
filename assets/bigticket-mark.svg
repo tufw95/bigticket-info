@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Bigticket</title>
+  <desc id="desc">An original geometric B monogram with a yellow speed bolt on a blue and teal badge.</desc>
+  <defs>
+    <linearGradient id="badge" x1="16" y1="12" x2="112" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0864F5"/>
+      <stop offset="1" stop-color="#00A6A6"/>
+    </linearGradient>
+    <linearGradient id="highlight" x1="24" y1="16" x2="91" y2="94" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="120" height="120" rx="31" fill="url(#badge)"/>
+  <path d="M4 59h10a5 5 0 0 1 0 10H4V59Zm120 0h-10a5 5 0 0 0 0 10h10V59Z" fill="#14213D" fill-opacity=".22"/>
+  <path d="M22 18h54c-23 8-39 25-47 49-4 13-5 26-2 39C15 96 8 81 8 64c0-18 5-34 14-46Z" fill="url(#highlight)"/>
+
+  <path fill="#FFF9E8" fill-rule="evenodd" d="M35 25h31c17 0 28 9 28 23 0 8-4 14-11 18 8 4 13 11 13 20 0 15-12 24-31 24H35V25Zm19 16v17h10c7 0 11-3 11-9s-4-8-11-8H54Zm0 33v19h11c8 0 12-3 12-10 0-6-4-9-12-9H54Z" clip-rule="evenodd"/>
+  <path d="m99 16-20 38h14L82 82l31-40H98l12-26H99Z" fill="#FFD34D" stroke="#14213D" stroke-width="4" stroke-linejoin="round"/>
+</svg>
